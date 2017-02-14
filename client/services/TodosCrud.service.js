@@ -19,6 +19,11 @@ var TodoCrudService = (function () {
         return this.http.get('/todos')
             .map(function (res) { return res.json(); });
     };
+    TodoCrudService.prototype.insertTodo = function (input) {
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        return this.http.post('/todos', input, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
     return TodoCrudService;
 }());
 TodoCrudService = __decorate([

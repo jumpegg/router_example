@@ -10,13 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var TodosCrud_service_1 = require("../../services/TodosCrud.service");
+var todo_1 = require("../../vo/todo");
 var TodosComponent = (function () {
     function TodosComponent(todosService) {
         this.todosService = todosService;
+        this.test = new todo_1.Todo("", "", "");
     }
     TodosComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.todosService.getTodoList().subscribe(function (data) { return _this.todoList = data; }, function (error) { return alert(error); });
+    };
+    TodosComponent.prototype.pushTodo = function (input) {
+        this.todosService.insertTodo(input).subscribe(function (data) { return console.log(data); }, function (error) { return alert(error); });
     };
     return TodosComponent;
 }());
@@ -24,7 +29,6 @@ TodosComponent = __decorate([
     core_1.Component({
         selector: 'todos',
         templateUrl: 'client/components/todos/todos.component.html',
-        // template:`<ul><li *ngFor="let todo of todoList">{{todo.title}}</li></ul>`,
         providers: [TodosCrud_service_1.TodoCrudService]
     }),
     __metadata("design:paramtypes", [TodosCrud_service_1.TodoCrudService])
