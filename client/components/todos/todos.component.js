@@ -22,7 +22,10 @@ var TodosComponent = (function () {
         this.todosService.getTodoList().subscribe(function (data) { return _this.todoList = data; }, function (error) { return alert(error); });
     };
     TodosComponent.prototype.pushTodo = function (input) {
-        this.todosService.insertTodo(input).subscribe(function (data) { return console.log(data); }, function (error) { return alert(error); });
+        var _this = this;
+        this.todosService.insertTodo(input).subscribe(function (data) {
+            _this.todosService.getTodoList().subscribe(function (data) { return _this.todoList = data; }, function (error) { return alert(error); });
+        }, function (error) { return alert(error); });
     };
     return TodosComponent;
 }());

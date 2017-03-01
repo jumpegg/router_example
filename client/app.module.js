@@ -12,7 +12,7 @@ var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var todos_component_1 = require("./components/todos/todos.component");
-var md_component_1 = require("./components/md/md.component");
+var test_component_1 = require("./components/test/test.component");
 var app_routing_1 = require("./app.routing");
 var AppModule = (function () {
     function AppModule() {
@@ -30,7 +30,7 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             todos_component_1.TodosComponent,
-            md_component_1.MdComponent
+            test_component_1.TestComponent
         ],
         bootstrap: [
             app_component_1.AppComponent

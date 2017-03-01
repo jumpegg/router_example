@@ -5,10 +5,9 @@ import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
 import {TodosComponent} from './components/todos/todos.component';
-import {MdComponent} from './components/md/md.component';
+import {TestComponent} from './components/test/test.component';
 
 import {AppRoutingModule} from './app.routing';
-
 
 @NgModule({
   imports: [
@@ -20,7 +19,7 @@ import {AppRoutingModule} from './app.routing';
   declarations: [
       AppComponent,
       TodosComponent,
-      MdComponent
+      TestComponent
   ],
   bootstrap: [
       AppComponent

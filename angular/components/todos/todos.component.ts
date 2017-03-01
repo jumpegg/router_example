@@ -25,12 +25,13 @@ export class TodosComponent implements OnInit{
 
     pushTodo(input){
         this.todosService.insertTodo(input).subscribe(
-            data => console.log(data),
+            data => {
+                this.todosService.getTodoList().subscribe(
+                        data => this.todoList = data,
+                        error => alert(error)
+                );
+            },
             error => alert(error)
         );
     }
-
-
-
-
 }
