@@ -18,14 +18,15 @@ var TodosComponent = (function () {
         this.test = new todo_1.Todo("", "", "");
     }
     TodosComponent.prototype.ngOnInit = function () {
+        this.TodoList();
+    };
+    TodosComponent.prototype.TodoList = function () {
         var _this = this;
         this.todosService.getTodoList().subscribe(function (data) { return _this.todoList = data; }, function (error) { return alert(error); });
     };
     TodosComponent.prototype.pushTodo = function (input) {
         var _this = this;
-        this.todosService.insertTodo(input).subscribe(function (data) {
-            _this.todosService.getTodoList().subscribe(function (data) { return _this.todoList = data; }, function (error) { return alert(error); });
-        }, function (error) { return alert(error); });
+        this.todosService.insertTodo(input).subscribe(function (data) { return _this.TodoList(); }, function (error) { return alert(error); });
     };
     return TodosComponent;
 }());

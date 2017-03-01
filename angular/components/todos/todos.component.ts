@@ -17,20 +17,19 @@ export class TodosComponent implements OnInit{
     }
 
     ngOnInit(){
+        this.TodoList();
+    }
+
+    TodoList(){
         this.todosService.getTodoList().subscribe(
             data => this.todoList = data,
             error => alert(error)
-        );
+        )
     }
 
     pushTodo(input){
         this.todosService.insertTodo(input).subscribe(
-            data => {
-                this.todosService.getTodoList().subscribe(
-                        data => this.todoList = data,
-                        error => alert(error)
-                );
-            },
+            data => this.TodoList(),
             error => alert(error)
         );
     }

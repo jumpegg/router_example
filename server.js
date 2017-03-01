@@ -25,8 +25,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.engine('html', require('ejs').renderFile);
 
-app.use('/public', express.static(__dirname + '/public'));
 app.use('/client', express.static(__dirname + '/client'));
+app.use('/semantic', express.static(__dirname + '/semantic/dist'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 // route 설정
