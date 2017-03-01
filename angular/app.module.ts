@@ -5,11 +5,25 @@ import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
 import {TodosComponent} from './components/todos/todos.component';
+import {MdComponent} from './components/md/md.component';
+
+import {AppRoutingModule} from './app.routing';
 
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpModule],
-  declarations: [AppComponent, TodosComponent],
-  bootstrap: [AppComponent]
+  imports: [
+      BrowserModule,
+      FormsModule,
+      HttpModule,
+      AppRoutingModule
+  ],
+  declarations: [
+      AppComponent,
+      TodosComponent,
+      MdComponent
+  ],
+  bootstrap: [
+      AppComponent
+  ]
 })
 export class AppModule{}

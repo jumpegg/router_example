@@ -5,12 +5,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var todos_component_1 = require("./components/todos/todos.component");
+var md_component_1 = require("./components/md/md.component");
+var app_routing_1 = require("./app.routing");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -18,9 +21,20 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
-        declarations: [app_component_1.AppComponent, todos_component_1.TodosComponent],
-        bootstrap: [app_component_1.AppComponent]
+        imports: [
+            platform_browser_1.BrowserModule,
+            forms_1.FormsModule,
+            http_1.HttpModule,
+            app_routing_1.AppRoutingModule
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            todos_component_1.TodosComponent,
+            md_component_1.MdComponent
+        ],
+        bootstrap: [
+            app_component_1.AppComponent
+        ]
     })
 ], AppModule);
 exports.AppModule = AppModule;

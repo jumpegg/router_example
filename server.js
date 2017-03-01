@@ -32,6 +32,7 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'));
 // route 설정
 var routes = require('./routes/index')(app);
 var todos = require('./routes/todos')(app, mysqlClient);
+var md = require('./routes/md')(app, mysqlClient);
 
 // 서버 실행
 var server = app.listen(3000, function(){

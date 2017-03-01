@@ -1,0 +1,10 @@
+<div>
+    <input type="text" name="title" [(ngModel)]="get.title">
+</div>
+<div>
+    <textarea [(ngModel)]="get.content" cols="30" rows="30"></textarea>
+</div>
+<button (click)="setMd(test);">submit</button>
+<div [innerHTML]="converted">
+
+</div>

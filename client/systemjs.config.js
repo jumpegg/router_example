@@ -13,7 +13,8 @@ System.config({
         '@angular/platform-browser':'npm/platform-browser/bundles/platform-browser.umd.js',
         '@angular/platform-browser-dynamic':'npm/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
         '@angular/router': 'npm/router/bundles/router.umd.js',
-        'rxjs': 'node_modules/rxjs'
+        'rxjs': 'node_modules/rxjs',
+        'marked': 'node_modules/marked/index.js'
     },
     packages : {
         app : {

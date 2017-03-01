@@ -17,6 +17,7 @@
     "@angular/platform-browser": "^2.4.4",
     "@angular/platform-browser-dynamic": "^2.4.4",
     "@angular/router": "^3.4.4",
+    "angular2-markdown": "^1.4.0",
     "async": "^2.0.1",
     "body-parser": "^1.16.0",
     "cookie-parser": "^1.4.3",
@@ -24,10 +25,12 @@
     "ejs": "^2.5.1",
     "express": "^4.14.0",
     "express-session": "^1.14.1",
+    "marked": "^0.3.6",
     "mysql": "^2.11.1",
     "ng-file-upload": "^12.2.12",
     "reflect-metadata": "^0.1.9",
     "rxjs": "^5.0.3",
+    "showdown": "^1.6.4",
     "systemjs": "^0.19.43",
     "zone.js": "^0.7.6"
   },
@@ -45,5 +48,16 @@
     "gulp-typescript": "^3.1.4",
     "gulp-uglifycss": "^1.0.6",
     "typescript": "^2.1.5"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "client"
+    },
+    "dependencies": {
+      "ng2-markdown-component": "github:evanplaice/ng2-markdown@^0.2.3"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^2.0.7"
+    }
   }
 }
